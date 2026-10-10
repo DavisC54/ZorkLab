@@ -12,7 +12,7 @@ namespace Zork
             while (command != Commands.QUIT)
             {
                 // Show which room the player is in at the start of every turn
-                Console.WriteLine(Rooms[LocationColumn]);
+                Console.WriteLine(Rooms[Location.Row, Location.Column]);
                 Console.Write("> ");
                 command = ToCommand(Console.ReadLine().Trim());
 
@@ -65,24 +65,38 @@ namespace Zork
             bool didMove = false;
             switch (command)
             {
+                // North goes up a row and stops at the top row
                 case Commands.NORTH:
-                case Commands.SOUTH:
+                    if (Location.Row < Rooms.GetLength(0) - 1)
+                    {
+                        Location.Row++;
+                        didMove = true;
+                    }
                     break;
 
-                // East goes right and stops at Rooms.Length - 1
-                case Commands.EAST:
-                    if (LocationColumn < Rooms.Length - 1)
+                // South goes down a row and stops at 0
+                case Commands.SOUTH:
+                    if (Location.Row > 0)
                     {
-                        LocationColumn++;
+                        Location.Row--;
+                        didMove = true;
+                    }
+                    break;
+
+                // East goes right and stops at the last column
+                case Commands.EAST:
+                    if (Location.Column < Rooms.GetLength(1) - 1)
+                    {
+                        Location.Column++;
                         didMove = true;
                     }
                     break;
 
                 // West goes left and stops at 0
                 case Commands.WEST:
-                    if (LocationColumn > 0)
+                    if (Location.Column > 0)
                     {
-                        LocationColumn--;
+                        Location.Column--;
                         didMove = true;
                     }
                     break;
@@ -90,11 +104,13 @@ namespace Zork
 
             return didMove;
         }
+        private static readonly string[,] Rooms = {
+            { "Rocky Trail", "South of House", "Canyon View" },
+            { "Forest", "West of House", "Behind House" },
+            { "Dense Woods", "North of House", "Clearing" }
+        };
 
-        // The whole map, left to right. West is left, east is right
-        private static string[] Rooms = { "Forest", "West of House", "Behind House", "Clearing", "Canyon View" };
-
-        // Which spot in Rooms the player is standing on. Starts at 1, which is West of House
-        private static int LocationColumn = 1;
+        // Which spot in rooms the player is standing on
+        private static (int Row, int Column) Location = (1, 1);
     }
 }
