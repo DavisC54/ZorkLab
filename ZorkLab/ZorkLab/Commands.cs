@@ -8,6 +8,6 @@
         SOUTH,
         EAST,
         WEST,
-        UNKOWN
+        UNKNOWN
     }
 }

@@ -1,0 +1,7 @@
+C:\Users\dlcer\source\repos\Lab week 7\ZorkLab\ZorkLab\ZorkLab\obj\Debug\ZorkLab.csproj.AssemblyReference.cache
+C:\Users\dlcer\source\repos\Lab week 7\ZorkLab\ZorkLab\ZorkLab\obj\Debug\ZorkLab.csproj.CoreCompileInputs.cache
+C:\Users\dlcer\source\repos\Lab week 7\ZorkLab\ZorkLab\ZorkLab\bin\Debug\ZorkLab.exe.config
+C:\Users\dlcer\source\repos\Lab week 7\ZorkLab\ZorkLab\ZorkLab\bin\Debug\ZorkLab.exe
+C:\Users\dlcer\source\repos\Lab week 7\ZorkLab\ZorkLab\ZorkLab\bin\Debug\ZorkLab.pdb
+C:\Users\dlcer\source\repos\Lab week 7\ZorkLab\ZorkLab\ZorkLab\obj\Debug\ZorkLab.exe
+C:\Users\dlcer\source\repos\Lab week 7\ZorkLab\ZorkLab\ZorkLab\obj\Debug\ZorkLab.pdb
