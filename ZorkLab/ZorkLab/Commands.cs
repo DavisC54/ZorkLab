@@ -1,13 +1,13 @@
 ﻿namespace Zork
 {
-	enum Commands
-	{
-		QUIT,
-		LOOK,
-		NORTH,
-		SOUTH,
-		EAST,
-		WEST,
-		UNKOWN
-	}
+    enum Commands
+    {
+        QUIT,
+        LOOK,
+        NORTH,
+        SOUTH,
+        EAST,
+        WEST,
+        UNKOWN
+    }
 }
